@@ -31,9 +31,9 @@ class App extends Component {
       <hr />
       <Switch>
         <Route exact path='/' render={() =>
-        this.state.sharShips.length
-        ?
+  
         <section>
+          
         {this.state.starShips.map((s,idx)=>(
           <Link 
             to={`/starships/${idx}`}
@@ -44,16 +44,17 @@ class App extends Component {
           </Link>
         ))}
         </section>
-        :
-        <h1>is Loading</h1>
         }/>
         <Route path={`/starships/:id`} render={props=>
+        this.state.starShips.length
+        ?
         <StarShipPage 
            {...props}
           starShip={this.handleOneStarShip}
             
         />
-          
+        :
+        <h1>is Loading</h1>
         
       }
       />

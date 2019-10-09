@@ -5,6 +5,7 @@ import React from 'react';
 const StarShipPage = (props)=>{
     const starShip = props.starShip(props.match.params.id);
     return(
+        
         <div>
             Name|||{starShip.name}
             Model>>{starShip.model}
